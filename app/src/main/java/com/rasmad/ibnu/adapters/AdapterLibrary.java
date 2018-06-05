@@ -8,11 +8,12 @@ import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.RelativeLayout;
+import android.content.Intent;
+import android.net.Uri;
 
 import com.rasmad.ibnu.R;
-import android.widget.RelativeLayout;
-import android.content.*;
-import android.net.*;
+import com.rasmad.ibnu.items.ItemLibrary;
 
 public class AdapterLibrary extends RecyclerView.Adapter<AdapterLibrary.LibraryViewHolder> {
 	private Context context;
