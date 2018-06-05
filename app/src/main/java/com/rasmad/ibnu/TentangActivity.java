@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.CardView;
 import android.support.v4.content.ContextCompat;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -15,6 +16,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.LayoutInflater;
+import android.content.Intent;
+import android.net.Uri;
 import android.webkit.WebView;
 import android.text.method.LinkMovementMethod;
 import java.util.List;
@@ -28,8 +31,6 @@ import com.rasmad.ibnu.items.ItemLibrary;
 import com.rasmad.ibnu.items.ItemMe;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import android.content.*;
-import android.net.*;
 
 public class TentangActivity extends AppCompatActivity
 {
@@ -128,6 +129,16 @@ public class TentangActivity extends AppCompatActivity
 		rv_me.setLayoutManager(llm_me);
 		rvAdapterMe = new AdapterMe(this, dataMe);
 		rv_me.setAdapter(rvAdapterMe);
+		
+		CardView openSource = (CardView) findViewById(R.id.card_view_opensource);
+		openSource.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View p1)
+			{
+				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/rasmadibnu/JadwalPelajaran")));
+			}
+		});
 	}
 
 	@Override
@@ -171,8 +182,6 @@ public class TentangActivity extends AppCompatActivity
 				lc.setPositiveButton("ok", null);
 				lc.show();
 				break;
-			case R.id.open_source:
-				Snackbar.make(coorLayout, "Coming Soon", Snackbar.LENGTH_LONG).show();
 		}
 		return super.onOptionsItemSelected(item);
 	}
