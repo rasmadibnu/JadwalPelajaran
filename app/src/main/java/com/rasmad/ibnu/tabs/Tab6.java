@@ -22,18 +22,23 @@ public class Tab6 extends Fragment {
 
 	private ArrayList<ItemJadwal> getJadwal() {
 		ArrayList<ItemJadwal> itemJadwal = new ArrayList<ItemJadwal>();
-		/*
-			Ubah jadwal anda disini sesuai jadwal yamg anda ingingkan
-			ItemJadwal.MAPEL_MODEL untuk tipe cardview jadwal
-			ItemJadwal.ISTIRAHAT_MODEL untuk tipe istirahat
-			
-			Isi tipe model dengan benar jika kirang jelas lihat contoh di bawah ini
-		*/
+		/* ###### UBAH, TAMBAH, HAPUS, EDIT JADWAL DISINI ######
+
+		 Gunakan ItemJadwal.MAPEL_MODEL untuk menambahkan tipe jadwal
+		 Contoh:
+		 itemJadwal.add(new ItemJadwal(ItemJadwal.MAPEL_MODEL, "","Nama Mapel", "Jam Mulai - Jam Selesai", "Nama Guru", "Ruangan", "Seragam yang digunakan"));
+		 &
+		 Gunakan ItemJadwal.ISTIRAHAT_MODEL untuk menambah tipe istirahat
+		 Contoh:
+		 itemJadwal.add(new ItemJadwal(ItemJadwal.ISTIRAHAT_MODEL, "Jam Istirahat dimulai - Jam Istirahat Selesai (Total Waktu Istirahat)", "", "", "", "", ""));
+
+		 Jika kurang jelas bisa liat di bawah ini
+		 */
 		itemJadwal.add(new ItemJadwal(ItemJadwal.MAPEL_MODEL, "","Pemrograman Desktop", "07:00 - 11:50", "Fery Updi, S.Kom, M.Kom", "WS. RPL", "Wearpack"));
-		itemJadwal.add(new ItemJadwal(ItemJadwal.ISTIRAHAT_MODEL, "Istirahat 11:50 - 12:30 (40 Menit)", "", "", "", "", ""));
+		itemJadwal.add(new ItemJadwal(ItemJadwal.ISTIRAHAT_MODEL, "11:50 - 12:30 (40 Menit)", "", "", "", "", ""));
 		itemJadwal.add(new ItemJadwal(ItemJadwal.MAPEL_MODEL, "", "Bahasa Indonesia", "12:30 - 14:00", "M.S Endang Roestini, S.Pd", "R3.09", "Putih Abu - abu"));
 		itemJadwal.add(new ItemJadwal(ItemJadwal.MAPEL_MODEL, "", "Bahasa Inggris", "14:00 - 15:30", "Risty Paradilla, S.Pd", "R3.09", "Putih Abu - abu"));
-		itemJadwal.add(new ItemJadwal(ItemJadwal.ISTIRAHAT_MODEL,"Istirahat 15:30 - 15:45 (15 Menit)", "", "", "", "", ""));
+		itemJadwal.add(new ItemJadwal(ItemJadwal.ISTIRAHAT_MODEL,"15:30 - 15:45 (15 Menit)", "", "", "", "", ""));
 		itemJadwal.add(new ItemJadwal(ItemJadwal.MAPEL_MODEL, "", "Sejarah Indonesia", "15:45 - 17:15", "M. Pairan, S.Pd", "R3.09", "Putih Abu - abu"));
 		return itemJadwal;
 	}
