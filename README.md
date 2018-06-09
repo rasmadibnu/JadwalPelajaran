@@ -1,14 +1,75 @@
 # JadwalPelajaran
 Aplikasi jadwal pelajaran yang bersifat insert data (not editable) ini di buat hanya untuk belajar dan mengisi waktu tidak untuk di perjual belikan atau di jadikan komersil, Project ini di buat sejak tahun 2017 dari versi BETA hingga Stable di tahun 2018 dan di versi Stable ini saya menjadikan project ini Open Source untuk berbagi dan mungkin bisa di terapkan untuk sekolah atau kelas kalian. Untuk menerapkan aplikasi ini di sekolah atau kelas kalian harus mengubah data terlebih dahulu agar sesuai dengan jadwal sekolah atau kelas kalian. Untuk cara mengubahnya bisa di liat di bawah ini
 
-## Tampilan Aplikasi
+# Tampilan Aplikasi
 | Light | another Light | Dark | another Dark
 |:-:|:-:|:-:|:-:|
 | ![Light1] | ![Light2] | ![Dark1] | ![Dark2] |
 
-## Cara Mengubah Data Jadwal, Istirahat, Wali Kelas, dll
+# Cara Mengubah Data Jadwal Pelajaran, Jadwal Istirahat, Wali Kelas, dll
 Di dalam aplikasi terdapat 6 Tab sesusai hari sekolah Senin s/d Sabtu perTab tersebut terdiri dari 6 Fragment yang terbentuk dengan program Java, Jika ingin mengubah Jadwal kita harus mengubah script di dalam file java tersebut letaknya ada di [app/src/java/com/rasmad/ibnu/tabs][Tabs]
+
+| Nama File | Nama Tab |
+|:-:|:-:|
+| Tab1.java | Senin |
+| Tab2.java | Selasa |
+| Tab3.java | Rabu |
+| Tab4.java | Kamis |
+| Tab5.java | Jum'at |
+| Tab6.java | Sabtu |
+
+Jika ingin mengubah isi jadwal harus sesuai dengan nama file dan tab di atas. Contoh jika anda ingin mengubah jadwal di hari senin anda harus mengubah file [Tab1.Java][Tab1], jika anda ingin mengubah jadwal di hari selasa maka anda harus mengubah file [Tab2.java][Tab2] dan begitu seterusnya. <br />
+## Sebagai contoh mengubah jadwal di hari Senin
+Buka [Tab1.java][Tab1] <br />
+Anda akan menemukan function [getJadwal()][getJadwal] <br />
+```java
+private ArrayList<ItemJadwal> getJadwal() {
+		ArrayList<ItemJadwal> itemJadwal = new ArrayList<ItemJadwal>();
+		// Ubah jadwal hari senin disini
+		return itemJadwal;
+	}
+```
+Anda bisa mengubah jadwal hari senin di dalam function tersebut <br />
+**Cara Menambah Jadwal**
+```java
+itemJadwal.add(new ItemJadwal.add(ItemJadwal.MAPEL_MODEL, "", "mapel", "jamMulai - jamSelesai", "namaGuru", "ruangan", "seragam"));
+```
+**Cara Menambah Jadwal Istirahat**
+```java
+itemJadwal.add(new ItemJadwal(ItemJadwal.ISTIRAHAT_MODEL, "Jam Istirahat dimulai - Jam Istirahat Selesai (Total Waktu Istirahat)", "", "", "", "", ""));	
+```
+Contoh jika di tambahkan di dalam function [getJadwal()][getJadwal] akan menjadi seperti ini
+```java
+private ArrayList<ItemJadwal> getJadwal() {
+		ArrayList<ItemJadwal> itemJadwal = new ArrayList<ItemJadwal>();
+		itemJadwal.add(new ItemJadwal(ItemJadwal.MAPEL_MODEL, "","Pemrograman Desktop", "07:00 - 11:50", "Fery Updi, S.Kom, M.Kom", "WS. RPL", "Wearpack"));
+		itemJadwal.add(new ItemJadwal(ItemJadwal.ISTIRAHAT_MODEL, "11:50 - 12:30 (40 Menit)", "", "", "", "", ""));
+		return itemJadwal;
+	}
+```
+Lalu compile dan hasilnya akan menjadi seperti ini<br />
+![EXM](https://github.com/rasmadibnu/JadwalPelajaran/blob/master/assets/example1.jpg)<br />
+Gunakan cara berikut untuk mengubah jadwal di hari selasa, rabu, dst
+
+**Keterangan**
+> ItemJadwal.MAPEL_MODEL untuk cardview jadwal <br />
+> ItemJadwal.ISTIRAHAT_MODEL untuk text istirahat
+
+**Jika kurang jelas bisa kontak saya di bawah**
+
+# Contact Me
+- [Facebook: @rasmadbnu](https://www.facebook.com/rasmasibnu/)
+- [Instagram: @rasmadibnu](https://www.instagram.com/rasmadibnu/)
+- [Twitter: @rasmadibnu](https://twitter.com/rasmadibnu)
+- [Gmail: rasmadibnua@gmail.com](https://www.google.com/gmail/)
+- [WhatsApp: 0895330376636](https://api.whatsapp.com/send?phone=+62895330376636&text=)
+
+# Happy Coding :)))
+
 [Tabs]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/tabs>
+[Tab1]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/tabs/Tab1.java>
+[Tab2]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/tabs/Tab2.java>
+[getJadwal]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/tabs/Tab1.java#L23>
 [Light1]: <https://github.com/rasmadibnu/JadwalPelajaran/blob/master/assets/screener_redmi4x_light(1).png>
 [Light2]: <https://github.com/rasmadibnu/JadwalPelajaran/blob/master/assets/screener_redmi4x_light(2).png>
 [Dark1]: <https://github.com/rasmadibnu/JadwalPelajaran/blob/master/assets/screener_redmi4x_dark(1).png>
