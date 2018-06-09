@@ -1,6 +1,7 @@
 # JadwalPelajaran
 Project yang bertujuan hanya untuk belajar dan mengisi waktu luang namun berguna untuk orang lain
-| Light | another Light | Dark | another Dark |
+
+| Light | another Light | Dark | another Dark
 |:-:|:-:|:-:|:-:|
 | ![Light1] | ![Light2] | ![Dark1] | ![Dark2] |
 
