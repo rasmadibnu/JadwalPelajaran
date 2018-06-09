@@ -4,7 +4,7 @@ Aplikasi jadwal pelajaran yang bersifat insert data (not editable) ini di buat h
 **Gunakan Mode Desktop Untuk Melihat Lebih Jelas**
 
 # Tampilan Aplikasi
-![WLL](https://github.com/rasmadibnu/JadwalPelajaran/blob/master/assets/wallpaper.jpg )
+![WLL](https://github.com/rasmadibnu/JadwalPelajaran/blob/master/assets/wallpaper.png)
 
 | Light | another Light | Dark | another Dark
 |:-:|:-:|:-:|:-:|
