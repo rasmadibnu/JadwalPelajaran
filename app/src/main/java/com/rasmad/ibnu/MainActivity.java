@@ -74,6 +74,14 @@ public class MainActivity extends AppCompatActivity
 	static final int DOCUMENT_REQUEST = 1;
 	static final int CAMERA_REQUEST = 2;
 	static final int STORAGE_PERMISSION_CODE = 3;
+	
+	// **** DATA NOMOR TELEPON **** \\
+	private String no_walas = "+6281385871440"; //Nomor telepon wali kelas
+	private String no_km = "+6283813802564"; //Nomor telepon ketua kelas
+	private String no_sekolah = "+62215980876"; //Nomor telepon sekolah
+	
+	/****** UNTUK MENGUBAH NAMA WALAS, KM, SEKOLAH SILAHKAN KE
+			FOLDER res/menu/nav_items.xml UBAH DI FILE INI ******/
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -220,8 +228,6 @@ public class MainActivity extends AppCompatActivity
 		if(nightmode == "true") {
 			AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 		} else if(nightmode == "false") {
-			AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-		} else if(nightmode == null) {
 			AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 		}
 	}
@@ -488,19 +494,19 @@ public class MainActivity extends AppCompatActivity
 						case R.id.nav_walikelas:
 							drawerLayout.closeDrawers();
 							Intent walas = new Intent("android.intent.action.DIAL");
-							walas.setData(Uri.parse("tel:+6281385871440"));
+							walas.setData(Uri.parse("tel:" + no_walas));
 							startActivity(walas);
 							break;
 						case R.id.nav_ketuakelas:
 							drawerLayout.closeDrawers();
 							Intent km = new Intent("android.intent.action.DIAL");
-							km.setData(Uri.parse("tel:+6283813802564"));
+							km.setData(Uri.parse("tel:" + no_km));
 							startActivity(km);
 							break;
 						case R.id.nav_sekolah:
 							drawerLayout.closeDrawers();
 							Intent sekolah = new Intent("android.intent.action.DIAL");
-							sekolah.setData(Uri.parse("tel:+62215980876"));
+							sekolah.setData(Uri.parse("tel:" + no_sekolah));
 							startActivity(sekolah);
 							break;
 						case R.id.tentang:

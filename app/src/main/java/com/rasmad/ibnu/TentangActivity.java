@@ -12,6 +12,7 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.widget.TextView;
+import android.widget.RelativeLayout;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -52,11 +53,12 @@ public class TentangActivity extends AppCompatActivity
 		itemCredit.add(new ItemCredit("• AIDE", "https://www.android-ide.com/"));
 		itemCredit.add(new ItemCredit("• Google", "https://developer.android.com/topic/libraries/support-library/"));
 		itemCredit.add(new ItemCredit("• Material Design Guidelines", "https://material.io/guidelines/"));
+		itemCredit.add(new ItemCredit("• Stack Overflow", "https://stackoverflow.com/"));
 		itemCredit.add(new ItemCredit("• Willi Ye aka Grarak", "https://github.com/Grarak/"));
 		itemCredit.add(new ItemCredit("• Henning Dodenhof", "https://github.com/hdodenhof/"));
 		itemCredit.add(new ItemCredit("• Wynoons", "https://www.instagram.com/wynonaptr/"));
 		itemCredit.add(new ItemCredit("• Muhammad Azrial", "https://www.facebook.com/azrialmons/"));
-		itemCredit.add(new ItemCredit("• Putriiiiiioiiiiiiiioooiioiioii", "https://www.instagram.com/dwiptr27"));
+		itemCredit.add(new ItemCredit("• Putriiiiiioiiiiiiiioooiioiioii", "https://www.instagram.com/dwiptr27/"));
 		return itemCredit;
 	}
 	
@@ -130,7 +132,7 @@ public class TentangActivity extends AppCompatActivity
 		rvAdapterMe = new AdapterMe(this, dataMe);
 		rv_me.setAdapter(rvAdapterMe);
 		
-		CardView openSource = (CardView) findViewById(R.id.card_view_opensource);
+		RelativeLayout openSource = (RelativeLayout) findViewById(R.id.open_source);
 		openSource.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -170,7 +172,7 @@ public class TentangActivity extends AppCompatActivity
 			case R.id.changelog:
 				AlertDialog.Builder cg = new AlertDialog.Builder(TentangActivity.this);
 				cg.setTitle("Changelog V7.0");
-				cg.setMessage("• Improvements UI\n• Bugs Fixes\n• Support for Android 8.1 (oreo)\n• Support Multi-Window\n• Get Stable Version\n• Night Mode\n• Adding some bugs to fix soon lol\n• Latest android support library version");
+				cg.setMessage("• Improvements UI\n• Bugs Fixes\n• Support for Android 8.1 (oreo)\n• Support Multi-Window\n• Get Stable Version\n• Night Mode (BETA)\n• Adding some bugs to fix soon lol\n• Latest android support library version");
 				cg.setPositiveButton("ok", null);
 				cg.show();
 				break;
