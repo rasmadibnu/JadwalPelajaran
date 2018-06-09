@@ -2,10 +2,12 @@ package com.rasmad.ibnu.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.net.Uri;
@@ -44,9 +46,19 @@ public class AdapterCredit extends RecyclerView.Adapter<AdapterCredit.CreditView
 			@Override
 			public void onClick(View p1)
 			{
-				Intent i = new Intent(Intent.ACTION_VIEW);
-				i.setData(Uri.parse(itemList.get(position).getLink()));
-				context.startActivity(i);
+				AlertDialog.Builder ad = new AlertDialog.Builder(context);
+				ad.setTitle("Link");
+				ad.setMessage("Buka url " + itemList.get(position).getLink());
+				ad.setNegativeButton("batal", null);
+				ad.setPositiveButton("ya", new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface p1, int p2)
+					{
+						context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(itemList.get(position).getLink())));
+					}
+				});
+				ad.show();
 			}
 		});
 	}

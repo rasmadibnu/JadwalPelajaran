@@ -1,7 +1,7 @@
 package com.rasmad.ibnu.adapters;
 
-import com.rasmad.ibnu.items.ItemLibrary;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AlertDialog;
 import android.content.Context;
 import java.util.List;
 import android.view.ViewGroup;
@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.RelativeLayout;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 
@@ -45,7 +46,19 @@ public class AdapterLibrary extends RecyclerView.Adapter<AdapterLibrary.LibraryV
 			@Override
 			public void onClick(View p1)
 			{
-				context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(itemList.get(position).getLink())));
+				AlertDialog.Builder ad = new AlertDialog.Builder(context);
+				ad.setTitle("Link");
+				ad.setMessage("Buka url " + itemList.get(position).getLink());
+				ad.setNegativeButton("batal", null);
+				ad.setPositiveButton("ya", new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface p1, int p2)
+					{
+						context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(itemList.get(position).getLink())));
+					}
+				});
+				ad.show();
 			}
 		});
 	}

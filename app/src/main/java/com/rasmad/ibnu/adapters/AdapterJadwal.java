@@ -89,7 +89,7 @@ public class AdapterJadwal extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 					((JadwalTypeViewHolder) holder).tvSeragam.setText(itemList.get(position).getSeragam());
 					break;
 				case ItemJadwal.ISTIRAHAT_MODEL:
-					((IstirahatTypeViewHolder) holder).ket.setText(itemList.get(position).getKet());
+					((IstirahatTypeViewHolder) holder).ket.setText("Istirahat" + itemList.get(position).getKet());
 			}
 		}
 	}
