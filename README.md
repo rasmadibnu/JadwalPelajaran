@@ -4,4 +4,5 @@ Project yang bertujuan hanya untuk belajar dan mengisi waktu luang namun berguna
 | Light  | Second Header |
 | ------------- | ------------- |
 |  fuck| Content Cell  |
-![IMG] (screenshot/screener_redmi4x_light(1).png)
+
+![IMG] (https://github.com/rasmadibnu/JadwalPelajaran/blob/master/assets/screener_redmi4x_light(1).png )
