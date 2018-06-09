@@ -79,7 +79,7 @@ Anda akan menemukan 6 item menu yang anda harus ubah cukup item 1 - 3 saja lebih
 ```
 Ubah di bagian android:title="nama" <br />
 ## Cara mengubah nomor telepon dan nama sekolah
-Buka [MainActivity.java][MainActivity] di [app/src/main/java/com/rasmad/ibnu/](https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/) <br /
+Buka [MainActivity.java][MainActivity] di [app/src/main/java/com/rasmad/ibnu/](https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/) <br />
 ```java
 private String no_walas = "+6281385871440"; //Nomor telepon wali kelas
 private String no_km = "+6283813802564"; //Nomor telepon ketua kelas
