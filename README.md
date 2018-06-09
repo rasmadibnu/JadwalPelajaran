@@ -6,7 +6,7 @@ Aplikasi jadwal pelajaran yang bersifat insert data (not editable) ini di buat h
 |:-:|:-:|:-:|:-:|
 | ![Light1] | ![Light2] | ![Dark1] | ![Dark2] |
 
-# Cara Mengubah Data Jadwal Pelajaran, Jadwal Istirahat, Wali Kelas, dll
+# Cara Mengubah Data Jadwal Pelajaran dan Jadwal Istirahat
 Di dalam aplikasi terdapat 6 Tab sesusai hari sekolah Senin s/d Sabtu perTab tersebut terdiri dari 6 Fragment yang terbentuk dengan program Java, Jika ingin mengubah Jadwal kita harus mengubah script di dalam file java tersebut letaknya ada di [app/src/java/com/rasmad/ibnu/tabs][Tabs]
 
 | Nama File | Nama Tab |
@@ -22,6 +22,7 @@ Jika ingin mengubah isi jadwal harus sesuai dengan nama file dan tab di atas. Co
 ## Sebagai contoh mengubah jadwal di hari Senin
 Buka [Tab1.java][Tab1] <br />
 Anda akan menemukan function [getJadwal()][getJadwal] <br />
+Anda bisa mengubah jadwal hari senin di dalam function tersebut <br />
 ```java
 private ArrayList<ItemJadwal> getJadwal() {
 		ArrayList<ItemJadwal> itemJadwal = new ArrayList<ItemJadwal>();
@@ -29,7 +30,6 @@ private ArrayList<ItemJadwal> getJadwal() {
 		return itemJadwal;
 	}
 ```
-Anda bisa mengubah jadwal hari senin di dalam function tersebut <br />
 **Cara Menambah Jadwal**
 ```java
 itemJadwal.add(new ItemJadwal.add(ItemJadwal.MAPEL_MODEL, "", "mapel", "jamMulai - jamSelesai", "namaGuru", "ruangan", "seragam"));
@@ -55,6 +55,39 @@ Gunakan cara berikut untuk mengubah jadwal di hari selasa, rabu, dst
 > ItemJadwal.MAPEL_MODEL untuk cardview jadwal <br />
 > ItemJadwal.ISTIRAHAT_MODEL untuk text istirahat
 
+# Mengubah nama dan nomor telepon wali kelas, ketua kelas, dan sekolah di menu drawer
+Ini berada di bagian menu drawer aplikasi jika men-slide dari kiri ke kanan akan muncul menu drawer kontak dari wali kelas, ketua kelas, dan sekolah ketika menu itu di klik akan memanggil android.intent.action.DIAL alias akan memanggil nomor telepon yang kita siapkan di dalam file [MainActivity.java][MainActivity] <br />
+## Cara mengubah nama 
+Buka [nav_items.xml][navItems] di [app/src/main/res/menu][Menu] <br />
+Anda akan menemukan 6 item menu yang anda harus ubah cukup item 1 - 3 saja lebih tepatnya di baris ke 12, 17, 22. <br />
+>Baris 12 untuk nama wali kelas <br />
+>Baris 17 untuk nama ketua kelas <br />
+>Baris 22 untuk nama sekolah
+```xml
+<item 
+      android:id="@+id/nav_walikelas" 
+      android:icon="@drawable/ic_phone"
+      android:title="Ahsin S.Pdi (Wali Kelas)" />
+<item 
+      android:id="@+id/nav_ketuakelas" 
+      android:icon="@drawable/ic_phone"
+      android:title="Bagas Afrizal (Ketua Kelas)" />
+<item 
+      android:id="@+id/nav_sekolah"
+      android:icon="@drawable/ic_phone"
+      android:title="SMK Yuppentek 2" />
+```
+Ubah di bagian android:title="nama" <br />
+## Cara mengubah nomor telepon dan nama sekolah
+Buka [MainActivity.java][MainActivity] di [app/src/main/java/com/rasmad/ibnu/](https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/) <br /
+```java
+private String no_walas = "+6281385871440"; //Nomor telepon wali kelas
+private String no_km = "+6283813802564"; //Nomor telepon ketua kelas
+private String no_sekolah = "+62215980876"; //Nomor telepon sekolah
+private String nama_sekolah = "SMK Yuppentek 2"; //Nama sekolah
+```
+Anda akan menemukan script di atas pada baris 79 dan silahkan ubah sesuai nomor telepon walas, km, dan sekolah anda, Dan jangan lupa untuk mengubah nama sekolah sesuai nama sekolah anda.
+
 **Jika kurang jelas bisa kontak saya di bawah**
 
 # Contact Me
@@ -62,14 +95,16 @@ Gunakan cara berikut untuk mengubah jadwal di hari selasa, rabu, dst
 - [Instagram: @rasmadibnu](https://www.instagram.com/rasmadibnu/)
 - [Twitter: @rasmadibnu](https://twitter.com/rasmadibnu)
 - [Gmail: rasmadibnua@gmail.com](https://www.google.com/gmail/)
-- [WhatsApp: 0895330376636](https://api.whatsapp.com/send?phone=+62895330376636&text=)
 
 # Happy Coding :)))
 
+[MainActivity]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/MainActivity.java>
 [Tabs]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/tabs>
 [Tab1]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/tabs/Tab1.java>
 [Tab2]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/tabs/Tab2.java>
 [getJadwal]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/java/com/rasmad/ibnu/tabs/Tab1.java#L23>
+[Menu]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/res/menu/>
+[navItems]: <https://github.com/rasmadibnu/JadwalPelajaran/tree/master/app/src/main/res/menu/nav_items.xml>
 [Light1]: <https://github.com/rasmadibnu/JadwalPelajaran/blob/master/assets/screener_redmi4x_light(1).png>
 [Light2]: <https://github.com/rasmadibnu/JadwalPelajaran/blob/master/assets/screener_redmi4x_light(2).png>
 [Dark1]: <https://github.com/rasmadibnu/JadwalPelajaran/blob/master/assets/screener_redmi4x_dark(1).png>
