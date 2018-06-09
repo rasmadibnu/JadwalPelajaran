@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+	
+	<TextView
+		android:id="@+id/credit_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingRight="16dp"
+		android:paddingLeft="16dp"
+		android:clickable="true"
+		android:foreground="?android:selectableItemBackground"
+		android:textAppearance="?android:textAppearanceSmall"
+		android:textColor="@color/accent"/>
+    
+</LinearLayout>

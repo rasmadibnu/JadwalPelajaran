@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/coorLayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<android.support.v4.widget.DrawerLayout
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/drawer_layout"
+		android:fitsSystemWindows="true"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+
+			<include
+				android:id="@+id/app_bar"
+				layout="@layout/app_bar"/>
+
+		</RelativeLayout>
+
+		<android.support.design.widget.NavigationView
+			android:layout_gravity="start"
+			android:id="@+id/navigation_view"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			app:menu="@menu/nav_items"
+			app:itemIconTint="@color/drawer_items_color"
+			app:itemTextColor="@color/drawer_items_color"
+			app:headerLayout="@layout/nav_header"/>
+
+	</android.support.v4.widget.DrawerLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

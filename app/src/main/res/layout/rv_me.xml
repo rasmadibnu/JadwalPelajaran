@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/rootLayoutMe"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="4dp"
+	android:paddingBottom="4dp"
+	android:paddingLeft="8dp"
+	android:paddingRight="16dp"
+	android:clickable="true"
+	android:foreground="?android:selectableItemBackground"
+	android:orientation="vertical">
+	
+	<ImageView
+		android:id="@+id/imageme"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="8dp"
+		android:layout_centerVertical="true"/>
+
+	<TextView
+		android:id="@+id/titleme"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/imageme"
+		android:textColor="@color/primary_text"
+		android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<TextView
+		android:id="@+id/subtitleme"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/imageme"
+		android:layout_below="@id/titleme"
+		android:textColor="@color/secondary_text"
+		android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>
+
