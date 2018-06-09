@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <item
+        android:id="@+id/donation"
+        android:title="Donasi" />
+	
+	<item
+		android:id="@+id/changelog"
+		android:title="Changelog" />
+	
+	<item
+		android:id="@+id/licenses"
+		android:title="Software Licenses" />
+    
+</menu>

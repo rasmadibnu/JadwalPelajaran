@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item 
+		android:title="Kontak">
+		<menu>
+			<item 
+				
+				android:id="@+id/nav_walikelas" 
+				android:icon="@drawable/ic_phone"
+				android:title="Ahsin S.Pdi (Wali Kelas)" />
+			<item 
+				
+				android:id="@+id/nav_ketuakelas" 
+				android:icon="@drawable/ic_phone"
+				android:title="Bagas Afrizal (Ketua Kelas)" />
+			<item 
+				 
+				android:id="@+id/nav_sekolah"
+				android:icon="@drawable/ic_phone"
+				android:title="SMK Yuppentek 2" />
+		</menu>
+	</item>
+	<item android:title="Lain-lain">
+		<menu>
+			<item 
+				android:id="@+id/tentang"
+				android:title="Tentang" />
+			<item
+				android:id="@+id/modemalam"
+				android:title="Mode Malam"
+				app:actionLayout="@layout/switch_daynight" />
+			
+			<item android:id="@+id/keluar"
+				android:title="Keluar" />
+		</menu>
+	</item>
+</menu>
