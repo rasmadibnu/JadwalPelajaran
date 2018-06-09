@@ -1,6 +1,8 @@
 # JadwalPelajaran
 Aplikasi jadwal pelajaran yang bersifat insert data (not editable) ini di buat hanya untuk belajar dan mengisi waktu tidak untuk di perjual belikan atau di jadikan komersil, Project ini di buat sejak tahun 2017 dari versi BETA hingga Stable di tahun 2018 dan di versi Stable ini saya menjadikan project ini Open Source untuk berbagi dan mungkin bisa di terapkan untuk sekolah atau kelas kalian. Untuk menerapkan aplikasi ini di sekolah atau kelas kalian harus mengubah data terlebih dahulu agar sesuai dengan jadwal sekolah atau kelas kalian. Untuk cara mengubahnya bisa di liat di bawah ini
 
+**Gunakan Mode Desktop Untuk Melihat Lebih Jelas**
+
 # Tampilan Aplikasi
 | Light | another Light | Dark | another Dark
 |:-:|:-:|:-:|:-:|
