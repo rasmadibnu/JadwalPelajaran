@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity
 	private String no_walas = "+6281385871440"; //Nomor telepon wali kelas
 	private String no_km = "+6283813802564"; //Nomor telepon ketua kelas
 	private String no_sekolah = "+62215980876"; //Nomor telepon sekolah
+	private String nama_sekolah = "SMK Yuppentek 2"; //Nama sekolah
 	
 	/****** UNTUK MENGUBAH NAMA WALAS, KM, SEKOLAH SILAHKAN KE
 			FOLDER res/menu/nav_items.xml UBAH DI FILE INI ******/
@@ -252,11 +253,9 @@ public class MainActivity extends AppCompatActivity
 		if(res != null && res.getCount() > 0) {
 			while(res.moveToNext()) {
 				username.setText(res.getString(1));
-				userschool.setText("SMK Yuppentek 2");
 			}
 		} else {
 			username.setText("Masukan nama anda...");
-			userschool.setText("SMK Yuppentek 2");
 			myDb.insertUsername("Masukan nama anda...");
 		}
 	}
@@ -429,6 +428,8 @@ public class MainActivity extends AppCompatActivity
 					alertDialog.show();
 				}
 			});
+		
+		userschool.setText(nama_sekolah);
 	}
 	
 	private void requestStoragePermission() {
