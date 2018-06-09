@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">XI RPL</string>
+    <string name="hello_world">Hello world!</string>
+	
+	<string name="drawer_open">Open</string>
+	<string name="drawer_close">Close</string>
+	
+	<string name="paypal_message">Seikhlashnya untuk membeli secangkir kopi. <a href="http://www.paypal.me/rasmadibnu">PayPal.Me/rasmadibnu</a></string>
+</resources>
