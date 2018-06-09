@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,10 @@ import com.rasmad.ibnu.adapters.AdapterJadwal;
 import com.rasmad.ibnu.items.ItemJadwal;
 
 public class Tab1 extends Fragment {
+
+	public Tab1() {
+
+	}
 	private ArrayList<ItemJadwal> datajadwal;
 	private LinearLayoutManager llm;
 	private RecyclerView recyclerview;
@@ -23,17 +28,19 @@ public class Tab1 extends Fragment {
 	private ArrayList<ItemJadwal> getJadwal() {
 		ArrayList<ItemJadwal> itemJadwal = new ArrayList<ItemJadwal>();
 		/* ###### UBAH, TAMBAH, HAPUS, EDIT JADWAL DISINI ######
-		
-		   Gunakan ItemJadwal.MAPEL_MODEL untuk menambahkan tipe jadwal
-		   Contoh:
-		   itemJadwal.add(new ItemJadwal(ItemJadwal.MAPEL_MODEL, "","Nama Mapel", "Jam Mulai - Jam Selesai", "Nama Guru", "Ruangan", "Seragam yang digunakan"));
-		   &
-		   Gunakan ItemJadwal.ISTIRAHAT_MODEL untuk menambah tipe istirahat
-		   Contoh:
-		   itemJadwal.add(new ItemJadwal(ItemJadwal.ISTIRAHAT_MODEL, "Jam Istirahat dimulai - Jam Istirahat Selesai (Total Waktu Istirahat)", "", "", "", "", ""));
-		   
-		   Jika kurang jelas bisa liat di bawah ini
-		*/
+
+		 Gunakan ItemJadwal.MAPEL_MODEL untuk menambahkan tipe jadwal
+		 Contoh:
+		 itemJadwal.add(new ItemJadwal(ItemJadwal.MAPEL_MODEL, "","Nama Mapel", "Jam Mulai - Jam Selesai", "Nama Guru", "Ruangan", "Seragam yang digunakan"));
+		 &
+		 Gunakan ItemJadwal.ISTIRAHAT_MODEL untuk menambah tipe istirahat
+		 Contoh:
+		 itemJadwal.add(new ItemJadwal(ItemJadwal.ISTIRAHAT_MODEL, "Jam Istirahat dimulai - Jam Istirahat Selesai (Total Waktu Istirahat)", "", "", "", "", ""));
+
+		 Kosongkan function ini jika tidak ada kegiatan di hari tsb
+
+		 Jika kurang jelas bisa liat di bawah ini
+		 */
 		itemJadwal.add(new ItemJadwal(ItemJadwal.MAPEL_MODEL, "","Pemrograman Desktop", "07:00 - 11:50", "Fery Updi, S.Kom, M.Kom", "WS. RPL", "Wearpack"));
 		itemJadwal.add(new ItemJadwal(ItemJadwal.ISTIRAHAT_MODEL, "11:50 - 12:30 (40 Menit)", "", "", "", "", ""));
 		itemJadwal.add(new ItemJadwal(ItemJadwal.MAPEL_MODEL, "", "Bahasa Indonesia", "12:30 - 14:00", "M.S Endang Roestini, S.Pd", "R3.09", "Putih Abu - abu"));
@@ -50,15 +57,26 @@ public class Tab1 extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.frag_tab1, container, false);
-		
+		View view = inflater.inflate(R.layout.frag_tab, container, false);
+
 		datajadwal = getJadwal();
+		TextView emptyText = view.findViewById(R.id.jadwalNotFound);
 	    llm = new LinearLayoutManager(this.getActivity());
-		
 		recyclerview = view.findViewById(R.id.recyclerview);
+
+		if (getJadwal().isEmpty()) {
+			recyclerview.setVisibility(View.GONE);
+			emptyText.setVisibility(View.VISIBLE);
+		}
+		else {
+			recyclerview.setVisibility(View.VISIBLE);
+			emptyText.setVisibility(View.GONE);
+		}
+
 		recyclerview.setLayoutManager(llm);
 		rvAdapter = new AdapterJadwal(getActivity(), datajadwal);
 		recyclerview.setAdapter(rvAdapter);
+
 		return view;
 	}
 }
