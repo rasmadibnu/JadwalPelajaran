@@ -1,7 +1,7 @@
 # JadwalPelajaran
 Project yang bertujuan hanya untuk belajar dan mengisi waktu luang namun berguna untuk orang lain
 
-| First Header  | Second Header |
+| Light  | Second Header |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+|  fuck| Content Cell  |
+![IMG] (screenshot/screener_redmi4x_light(1).png)
