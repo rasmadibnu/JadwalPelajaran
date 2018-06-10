@@ -75,11 +75,12 @@ public class MainActivity extends AppCompatActivity
 	static final int CAMERA_REQUEST = 2;
 	static final int STORAGE_PERMISSION_CODE = 3;
 	
-	// **** DATA NOMOR TELEPON **** \\
+	// **** DATA APLIKASI **** \\
 	private String no_walas = "+6281385871440"; //Nomor telepon wali kelas
 	private String no_km = "+6283813802564"; //Nomor telepon ketua kelas
 	private String no_sekolah = "+62215980876"; //Nomor telepon sekolah
 	private String nama_sekolah = "SMK Yuppentek 2"; //Nama sekolah
+	private String nama_kelas = "XI RPL"; //Nama kelas
 	
 	/****** UNTUK MENGUBAH NAMA WALAS, KM, SEKOLAH SILAHKAN KE
 			FOLDER res/menu/nav_items.xml UBAH DI FILE INI ******/
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity
 		
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
-		getSupportActionBar().setTitle(R.string.app_name);
+		getSupportActionBar().setTitle(nama_kelas);
 		
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.drawer_open, R.string.drawer_close){
@@ -122,7 +123,6 @@ public class MainActivity extends AppCompatActivity
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 		
-		welcomeDialog();
 		cekDP();
 		cekUsername();
     }
