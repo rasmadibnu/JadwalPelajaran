@@ -89,8 +89,9 @@ private String no_walas = "+6281385871440"; //Nomor telepon wali kelas
 private String no_km = "+6283813802564"; //Nomor telepon ketua kelas
 private String no_sekolah = "+62215980876"; //Nomor telepon sekolah
 private String nama_sekolah = "SMK Yuppentek 2"; //Nama sekolah
+private String nama_kelas = " XI RPL" //Nama kelas
 ```
-Anda akan menemukan script di atas pada baris 79 dan silahkan ubah sesuai nomor telepon walas, km, dan sekolah anda, Dan jangan lupa untuk mengubah nama sekolah sesuai nama sekolah anda.
+Anda akan menemukan script di atas pada baris 79 dan silahkan ubah sesuai nomor telepon walas, km, dan sekolah anda, Dan jangan lupa untuk mengubah nama sekolah dan kelas. <br />
 
 **Jika kurang jelas bisa kontak saya di bawah**
 
